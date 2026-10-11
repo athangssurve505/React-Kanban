@@ -1,0 +1,27 @@
+:root{
+
+     /* Background colors */
+      --color-bg-primary:#21212D;
+      --color-bg-secondary:#2C2C38;
+      --color-bg-tertiary:#645EC9;
+
+     --text-color:white;
+
+    /* ===== Spacing ===== */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+
+
+    /* ===== Borders ===== */
+  --border-color: #3e3f4e;
+  --border-width: 1px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+}

@@ -1,0 +1,12 @@
+.btn{
+    padding: var(--spacing-3) var(--spacing-4);
+    cursor: pointer;
+    border-radius: var(--radius-lg);
+    color: white;
+    outline: none;
+    border: transparent;
+}
+
+.btn-primary{
+    background-color: var(--color-bg-tertiary);
+}
