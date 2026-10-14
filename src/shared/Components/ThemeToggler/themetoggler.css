@@ -1,0 +1,35 @@
+.toggler-wrapper{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    background-color: gray;
+    border-radius: var(--radius-pill);
+    cursor:pointer;
+    border: 2px solid var(--border-color);
+    padding: var(--spacing-);
+    overflow: hidden;
+     
+}
+
+.switch{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: var(--radius-pill);
+    transition: transform 0.3s ease;
+}
+
+.switch.active {
+  transform: translateX(30px);
+  
+}
+
+.active-bg{
+background-color: var(--color-bg-tertiary);
+}

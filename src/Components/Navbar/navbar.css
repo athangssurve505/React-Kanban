@@ -1,0 +1,21 @@
+.navbar-wrapper{
+    background-color: var(--color-bg-secondary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: var(--spacing-1) var(--spacing-3);
+     border-bottom: 1px solid var(--border-color);
+   
+}
+
+.navbar-wrapper h1{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.buttons-wrapper{
+    display: flex;
+    gap: 10px;
+}

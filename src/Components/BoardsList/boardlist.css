@@ -1,0 +1,28 @@
+.board-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  color: gray;
+   
+    /* font-family: var(--font-secondary); */
+}
+
+.board-item{
+  background-color: transparent;
+   padding: 0 var(--spacing-4);
+   border-radius:  0 var(--radius-pill) var(--radius-pill) 0;
+  cursor: pointer;
+   
+   font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.board-item.active {
+  background-color: var(--color-bg-tertiary);
+  color: white;
+}
+
+.board-wrapper > p:first-child {
+font-size: 15px;
+margin-left: var(--spacing-5);
+}

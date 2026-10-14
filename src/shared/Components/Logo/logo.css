@@ -1,0 +1,15 @@
+.logo-wrapper{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: var(--spacing-5);
+    
+}
+
+.logo-img{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}

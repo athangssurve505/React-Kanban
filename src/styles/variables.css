@@ -7,6 +7,10 @@
 
      --text-color:white;
 
+      /* Font families */
+  --font-primary: Arial, sans-serif;
+  --font-secondary: "Courier New", monospace;
+
     /* ===== Spacing ===== */
     --spacing-1: 0.25rem;
     --spacing-2: 0.5rem;
@@ -24,4 +28,11 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-pill: 999px;
+}
+
+[data-theme="light"] {
+  /* Background colors */
+   --color-bg-primary: #EAE9E7;
+  --color-bg-secondary: #F2F1EF;
+  --text-color:black;
 }
