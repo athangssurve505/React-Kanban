@@ -1,0 +1,30 @@
+.text-area-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text-area-group textarea {
+  width: 100%;
+  font: inherit;
+  box-sizing: border-box;
+  padding: var(--spacing-3);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: var(--text-color);
+  font-size: 14px;
+margin-bottom: var(--spacing-5);
+}
+
+.text-area-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+
+

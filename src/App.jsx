@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css"
 import Navbar from "./Components/Navbar"
 import SideBar from "./Layouts/Sidebar"
+import Board from "./Layouts/Board";
+import Modal from "./Layouts/Modal";
 
 
 
@@ -20,7 +22,12 @@ function changeTheme (){
   return (
     <div className="main-app" data-theme={theme}>
       <SideBar/>
-      <Navbar themeChanger={changeTheme} theme={theme}/>
+      <div className="main-content">
+        <Navbar themeChanger={changeTheme} theme={theme}/>
+      <Board/>
+      </div>
+
+      <Modal/>
     </div>
   )
 }

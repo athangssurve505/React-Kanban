@@ -1,0 +1,91 @@
+
+.form-group {
+ width: 100%;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 62px;
+  padding: 0 14px;
+  position: relative;
+  box-sizing: border-box;
+
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  transition: border-color 0.2s ease;
+}
+
+.select-wrapper:focus-within {
+  border-color: var(--color-primary);
+}
+
+.select-wrapper select {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background: transparent;
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: 15px;
+}
+
+.select-wrapper select option {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.select-icon {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+/* Priority colors */
+.status-dot.low {
+  background: #22c55e;
+}
+
+.status-dot.medium {
+  background: #eab308;
+}
+
+.status-dot.high {
+  background: #ef4444;
+}
+
+/* Task status colors */
+.status-dot.todo {
+  background: #818cf8;
+}
+
+.status-dot.doing {
+  background: #38bdf8;
+}
+
+.status-dot.done {
+  background: #22c55e;
+}

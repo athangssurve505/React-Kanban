@@ -2,11 +2,20 @@
     padding: var(--spacing-3) var(--spacing-4);
     cursor: pointer;
     border-radius: var(--radius-lg);
-    color: white;
+    color: var(--text-color);
     outline: none;
     border: transparent;
 }
 
 .btn-primary{
     background-color: var(--color-bg-tertiary);
+}
+
+.btn-primary{
+    background-color: var(--color-bg-tertiary);
+}
+
+.btn-secondary{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
 }
