@@ -3,12 +3,12 @@ import ThemeToggler from "../../shared/Components/ThemeToggler"
 import "./navbar.css"
 
 
-export default function Navbar({themeChanger, theme}) {
+export default function Navbar({themeChanger, theme, modalToggler}) {
   return (
     <div className="navbar-wrapper">
         <h1>Platform Launch</h1>
        <div className="buttons-wrapper">
-         <Button text={"Add New Task +"} />
+         <Button text={"Add New Task +"} onClick={modalToggler} />
         <ThemeToggler themeChanger={themeChanger} theme ={theme}/>
        </div>
     </div>

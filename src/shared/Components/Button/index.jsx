@@ -1,8 +1,8 @@
 import "./button.css"
 
-export default function Button ({text,variant="primary"}){
+export default function Button ({text,variant="primary",onClick , type="button"}){
 
     return (
-        <button className={`btn btn-${variant}`}>{text}</button>
+        <button type={type} onClick={onClick} className={`btn btn-${variant}`}>{text}</button>
     )
 }

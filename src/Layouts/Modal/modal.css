@@ -50,7 +50,7 @@ padding: var(--spacing-2) var(--spacing-4);
     background-color: #2C2C38;
     padding: var(--spacing-2);
     border-radius: var(--radius-sm);
-    
+    cursor: pointer;
 }
 
 .dropdown-wrapper{

@@ -6,7 +6,7 @@ import "./dropdown.css";
 
 
 
-export default function DropDown({type}) {
+export default function DropDown({type,...props}) {
  const [value, setValue] = useState(type.data[0]);
   return (
 
@@ -18,8 +18,7 @@ export default function DropDown({type}) {
 
           <select
             id="priority"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+           {...props}
           >
             {
                 type.data.map((item)=>{
@@ -27,8 +26,6 @@ export default function DropDown({type}) {
                 })
             }
            
-            {/* <option value="Medium">Medium</option>
-            <option value="High">High</option> */}
           </select>
 
           <RiArrowDownSLine className="select-icon" size={20} />

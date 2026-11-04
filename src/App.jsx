@@ -9,8 +9,9 @@ import Modal from "./Layouts/Modal";
 
 export default function App() {
 const [theme, setTheme] = useState("dark");
+const [showModal, setShowModal] = useState(false);
 
-console.log("App runs")
+
 
 function changeTheme (){
     setTheme((prev)=>{
@@ -19,15 +20,22 @@ function changeTheme (){
     )
 }
 
+function toggleModal(){
+
+  setShowModal((prev)=>{
+    return !prev;
+  })
+}
+
   return (
     <div className="main-app" data-theme={theme}>
       <SideBar/>
       <div className="main-content">
-        <Navbar themeChanger={changeTheme} theme={theme}/>
+        <Navbar themeChanger={changeTheme} theme={theme} modalToggler={toggleModal}  />
       <Board/>
       </div>
 
-      <Modal/>
+   {showModal &&   <Modal modalsetter={setShowModal}/>}
     </div>
   )
 }

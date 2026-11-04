@@ -1,6 +1,6 @@
 
 import "./textarea.css"
-function TextArea() {
+function TextArea({...props}) {
   
 
   return (
@@ -9,9 +9,10 @@ function TextArea() {
 
       <textarea
         id="description"
-    
+
         placeholder="Add details about this task..."
         rows={4}
+        {...props}
       />
 
       
