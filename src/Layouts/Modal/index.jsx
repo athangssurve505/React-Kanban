@@ -9,7 +9,7 @@ import useTasks from "../../Context/TaskProvider";
 import { useForm } from "react-hook-form";
 
 export default function Modal({modalsetter}){
-    const { addTasks } = useTasks();
+    const { addTasks, tasks } = useTasks();
 
     const {
         register,
@@ -22,10 +22,18 @@ export default function Modal({modalsetter}){
          status: "Todo",
   },
 });
-
      function onSubmit(data) {
-        console.log(data);
+     try {
+     addTasks(data);
+
+        reset();
+
+        modalsetter(false);
+
+  } catch (error) {
+    console.log(error);
   }
+}
 
     return (
 

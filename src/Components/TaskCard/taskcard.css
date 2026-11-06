@@ -1,0 +1,77 @@
+
+.task-card {
+  background: var(--card-bg, #20232e);
+  border: 1px solid var(--border-color, #343847);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.task-card:hover {
+  border-color: #7772f5;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(100, 90, 255, 0.12);
+}
+
+.task-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-title {
+  color: var(--text-primary, #f1f1f5);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.task-description {
+  color: var(--text-secondary, #a0a3b1);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.custom-btn{
+  width: fit-content;
+  padding: var(--spacing-3) var(--spacing-2);
+}
+
+/* Priority badges */
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.priority-badge.low {
+  color: #55d6a1;
+  background: rgba(85, 214, 161, 0.12);
+  border: 1px solid rgba(85, 214, 161, 0.25);
+}
+
+.priority-badge.medium {
+  color: #f4c66a;
+  background: rgba(244, 198, 106, 0.12);
+  border: 1px solid rgba(244, 198, 106, 0.25);
+}
+
+.priority-badge.high {
+  color: #ff7777;
+  background: rgba(255, 119, 119, 0.12);
+  border: 1px solid rgba(255, 119, 119, 0.25);
+}

@@ -1,4 +1,4 @@
-import { useState,createContext,useContext } from "react";
+import { useState,createContext,useContext, useEffect } from "react";
 
 
 
@@ -6,7 +6,11 @@ const TaskContext = createContext(null);
 
 export function TaskProvider({ children }){
 
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(()=>{
+        const savedTasks = localStorage.getItem("tasks");
+
+        return savedTasks?JSON.parse(savedTasks):[];
+    });
 
 
     function addTasks(taskData){
@@ -20,9 +24,22 @@ export function TaskProvider({ children }){
         })
     }
 
+    function deleteTask(id){
+        setTasks((prev)=>{
+            return prev.filter((task)=>task.id!=id);
+        })
+    }
+
+
+    useEffect(() => {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    
+    }, [tasks])
+    
+
 return(
 
-    <TaskContext.Provider value={{addTasks,tasks}}>
+    <TaskContext.Provider value={{addTasks,tasks , deleteTask}}>
         {children}
     </TaskContext.Provider>
 )

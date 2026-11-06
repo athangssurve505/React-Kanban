@@ -19,3 +19,25 @@
     background-color: transparent;
     border: 1px solid var(--border-color);
 }
+
+
+.btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  background: rgba(255, 0, 0, 1);
+  border: none;
+  color: var(--text-color);
+
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+ 
+  background: rgba(255, 0, 0, .5);
+}
