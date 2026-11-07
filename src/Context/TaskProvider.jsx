@@ -29,6 +29,16 @@ export function TaskProvider({ children }){
             return prev.filter((task)=>task.id!=id);
         })
     }
+    
+   function updateTaskStatus(id, newStatus) {
+  setTasks((prev) => {
+    return prev.map((task) => {
+      return task.id === id
+        ? { ...task, status: newStatus }
+        : task;
+    });
+  });
+}
 
 
     useEffect(() => {
@@ -39,7 +49,7 @@ export function TaskProvider({ children }){
 
 return(
 
-    <TaskContext.Provider value={{addTasks,tasks , deleteTask}}>
+    <TaskContext.Provider value={{addTasks,tasks , deleteTask , updateTaskStatus}}>
         {children}
     </TaskContext.Provider>
 )

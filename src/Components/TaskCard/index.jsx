@@ -10,8 +10,14 @@ export default function TaskCard({ task }) {
     deleteTask(task.id)
   }
    
+
+function handleDragStart(e){
+  e.dataTransfer.setData("taskId",task.id);
+  e.dataTransfer.effectAllowed = "move";
+
+}
   return (
-    <div className="task-card">
+    <div className="task-card"  draggable={true} onDragStart={handleDragStart}>
 
       <div className="task-card-header">
         <h3 className="task-title">{task.title}</h3>

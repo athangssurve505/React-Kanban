@@ -3,13 +3,19 @@ import "./board.css";
 import useTasks from "../../Context/TaskProvider";
 
 export default function Board(){
-    const {tasks} = useTasks();
+    const {tasks , updateTaskStatus} = useTasks();
+    console.log(tasks)
   
      const columns = [
     { name: "Todo", color: "cyan" },
     { name: "Doing", color: "purple" },
     { name: "Done", color: "green" }
   ];
+
+
+  function handleDropTask(taskId, newStatus) {
+  updateTaskStatus(taskId, newStatus);
+}
 
     return(
         <div className="main-board">
@@ -26,6 +32,8 @@ export default function Board(){
                 colName={col.name}
                 color={col.color}
                 tasks={filteredTasks}
+                onDropTask={handleDropTask}
+
              />
             )
         })
